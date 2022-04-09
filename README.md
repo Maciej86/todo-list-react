@@ -1,8 +1,8 @@
 # TODO LIST - REACT
 
-Application that creates a to-do list.
+Application that creates a ToDo List.
 
-![ToDo List - React](https://github.com/Maciej86/todo-list-react/blob/main/public/og-image.webp)
+![ToDo List - React](https://github.com/Maciej86/todo-list-react/blob/main/public/og-image.webp)git
 
 ## DEMO
 

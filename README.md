@@ -2,6 +2,8 @@
 
 Application that creates a to-do list.
 
+![ToDo List - React](https://github.com/Maciej86/todo-list-react/blob/main/public/og-image.webp)
+
 ## DEMO
 
 https://maciej86.github.io/todo-list-react/

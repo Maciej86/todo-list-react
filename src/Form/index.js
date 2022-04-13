@@ -10,7 +10,6 @@ const Form = ({addNewTask}) => {
             addNewTask(newTaskContent.trim());
         }
         setNewTaskContent("");
-        return;
     };
 
     return (

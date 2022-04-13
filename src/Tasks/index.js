@@ -2,7 +2,7 @@ import "./style.css";
 import removeIcon from "./images/remove.png";
 import doneIcon from "./images/done.png";
 
-const Tasks = ({tasks, hideDone}) => (
+const Tasks = ({tasks, hideDone, removeTask}) => (
     <ul className="task">
         {tasks.map(task => (
             <li 
@@ -12,7 +12,10 @@ const Tasks = ({tasks, hideDone}) => (
                     {task.done ? <img src={doneIcon} alt="Oznacz jako wykonane"/> : ""}
                 </button>
                 <span className={`task__content${task.done ? " task__content--done" : ""}`}> {task.content}</span>
-                <button className="task__button task__button--remove">
+                <button
+                    onClick={() => removeTask(task.id)} 
+                    className="task__button task__button--remove"
+                >
                     <img src={removeIcon} alt="usuń z listy"/>
                 </button>
             </li>

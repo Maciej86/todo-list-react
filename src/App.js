@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -7,16 +7,18 @@ import Header from "./Header";
 import Container from "./Container";
 
 function App() {
-	const saveTasks = (tasks) => {
-		localStorage.setItem("tasks", JSON.stringify(tasks));
+	const getLoadTask = () => {
+		const loadTask = JSON.parse(localStorage.getItem("tasks"));
+		console.log(loadTask);
+		return loadTask !== null ? loadTask : [];
 	};
 
 	const [hideDone, setHideDone] = useState(false);
-	const [tasks, setTasks] = useState([
-		{ id: 1, content: "Przykładowy pozycja na liscie", done: false },
-		{ id: 2, content: "Zadanie do wykonania", done: true },
-	]);
-	saveTasks(tasks);
+	const [tasks, setTasks] = useState(getLoadTask);
+
+	useEffect(() => {
+		localStorage.setItem("tasks", JSON.stringify(tasks));
+	}, [tasks]);
 
 	const toggleHideDone = () => {
 		setHideDone((hideDone) => !hideDone);
@@ -24,7 +26,6 @@ function App() {
 
 	const removeTask = (id) => {
 		setTasks((tasks) => tasks.filter((task) => task.id !== id));
-		saveTasks(tasks);
 	};
 
 	const toggleTaskDone = (id) => {
@@ -37,7 +38,6 @@ function App() {
 				return task;
 			})
 		);
-		saveTasks(tasks);
 	};
 
 	const setAllDone = () => {
@@ -47,7 +47,6 @@ function App() {
 				done: true,
 			}))
 		);
-		saveTasks(tasks);
 	};
 
 	const addNewTask = (content) => {
@@ -59,7 +58,6 @@ function App() {
 				id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
 			},
 		]);
-		saveTasks(tasks);
 	};
 
 	return (

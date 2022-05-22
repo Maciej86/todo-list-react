@@ -7,11 +7,7 @@ import Header from "./Header";
 import Container from "./Container";
 
 function App() {
-	const getLoadTask = () => {
-		const loadTask = JSON.parse(localStorage.getItem("tasks"));
-		console.log(loadTask);
-		return loadTask !== null ? loadTask : [];
-	};
+	const getLoadTask = () => JSON.parse(localStorage.getItem("tasks")) || [];
 
 	const [hideDone, setHideDone] = useState(false);
 	const [tasks, setTasks] = useState(getLoadTask);

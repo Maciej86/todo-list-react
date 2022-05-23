@@ -1,37 +1,29 @@
-import "./style.css";
+import {
+	StyledList,
+	StyledListItem,
+	StyledButton,
+	StyledContentTask,
+} from "./styled";
 import removeIcon from "./images/remove.png";
 import doneIcon from "./images/done.png";
 
 const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
-	<ul className="task">
+	<StyledList>
 		{tasks.map((task) => (
-			<li
-				className={`task__item ${
-					hideDone && task.done ? "task__item--taskHide" : ""
-				}`}
-				key={task.id}
-			>
-				<button
-					onClick={() => toggleTaskDone(task.id)}
-					className="task__button task__button--done"
-				>
+			<StyledListItem hidden={hideDone && task.done} key={task.id}>
+				<StyledButton doneTask onClick={() => toggleTaskDone(task.id)}>
 					{task.done ? <img src={doneIcon} alt="Oznacz jako wykonane" /> : ""}
-				</button>
-				<span
-					className={`task__content${task.done ? " task__content--done" : ""}`}
-				>
+				</StyledButton>
+				<StyledContentTask taskDone={task.done}>
 					{" "}
 					{task.content}
-				</span>
-				<button
-					onClick={() => removeTask(task.id)}
-					className="task__button task__button--remove"
-				>
+				</StyledContentTask>
+				<StyledButton removeTask onClick={() => removeTask(task.id)}>
 					<img src={removeIcon} alt="usuń z listy" />
-				</button>
-			</li>
+				</StyledButton>
+			</StyledListItem>
 		))}
-	</ul>
+	</StyledList>
 );
 
 export default Tasks;

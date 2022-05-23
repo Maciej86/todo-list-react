@@ -24,7 +24,7 @@ export const StyledInput = styled.input`
 	}
 `;
 
-export const StyledButton = styled.css`
+export const StyledButton = styled.button`
 	padding: 10px 25px;
 	background: rgb(0, 128, 128);
 	border: none;

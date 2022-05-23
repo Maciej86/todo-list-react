@@ -1,29 +1,28 @@
 import { useState } from "react";
-import "./style.css";
+import { StyledForm, StyledInput, styledButton } from "./styled";
 
-const Form = ({addNewTask}) => {
-    const [newTaskContent, setNewTaskContent] = useState("");
+const Form = ({ addNewTask }) => {
+	const [newTaskContent, setNewTaskContent] = useState("");
 
-    const onFormSubmit = event => {
-        event.preventDefault();
-        const trimNewTaskContent = newTaskContent.trim();
-        if(trimNewTaskContent !== "") {
-            addNewTask(trimNewTaskContent);
-        }
-        setNewTaskContent("");
-    };
+	const onFormSubmit = (event) => {
+		event.preventDefault();
+		const trimNewTaskContent = newTaskContent.trim();
+		if (trimNewTaskContent !== "") {
+			addNewTask(trimNewTaskContent);
+		}
+		setNewTaskContent("");
+	};
 
-    return (
-        <form className="form" onSubmit={onFormSubmit}>
-            <input 
-                value={newTaskContent}
-                onChange={({ target }) => setNewTaskContent(target.value)}
-                type="text" 
-                className="form__input"
-            />
-            <button className="form__button">Dodaj zadanie</button>
-        </form>
-    )
-}
+	return (
+		<StyledForm onSubmit={onFormSubmit}>
+			<StyledInput
+				value={newTaskContent}
+				onChange={({ target }) => setNewTaskContent(target.value)}
+				type="text"
+			/>
+			<styledButton>Dodaj zadanie</styledButton>
+		</StyledForm>
+	);
+};
 
 export default Form;

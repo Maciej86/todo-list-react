@@ -17,7 +17,7 @@ function App() {
 		useTask();
 
 	return (
-		<Main className="main">
+		<Main>
 			<Header title="Lista zadań" />
 
 			<Section

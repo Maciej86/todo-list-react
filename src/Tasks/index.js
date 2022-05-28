@@ -1,29 +1,27 @@
 import {
-	StyledList,
-	StyledListItem,
-	StyledButton,
-	StyledContentTask,
+	List,
+	ListItem,
+	DoneButton,
+	RemoveButton,
+	ContentTask,
 } from "./styled";
 import removeIcon from "./images/remove.png";
 import doneIcon from "./images/done.png";
 
 const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
-	<StyledList>
+	<List>
 		{tasks.map((task) => (
-			<StyledListItem hidden={hideDone && task.done} key={task.id}>
-				<StyledButton doneTask onClick={() => toggleTaskDone(task.id)}>
+			<ListItem hidden={hideDone && task.done} key={task.id}>
+				<DoneButton onClick={() => toggleTaskDone(task.id)}>
 					{task.done ? <img src={doneIcon} alt="Oznacz jako wykonane" /> : ""}
-				</StyledButton>
-				<StyledContentTask taskDone={task.done}>
-					{" "}
-					{task.content}
-				</StyledContentTask>
-				<StyledButton removeTask onClick={() => removeTask(task.id)}>
+				</DoneButton>
+				<ContentTask taskDone={task.done}> {task.content}</ContentTask>
+				<RemoveButton onClick={() => removeTask(task.id)}>
 					<img src={removeIcon} alt="usuń z listy" />
-				</StyledButton>
-			</StyledListItem>
+				</RemoveButton>
+			</ListItem>
 		))}
-	</StyledList>
+	</List>
 );
 
 export default Tasks;

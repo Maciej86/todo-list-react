@@ -7,7 +7,7 @@ export const StyledSection = styled.section`
 	box-shadow: 0 0 10px rgb(190, 190, 190);
 `;
 
-export const StyledDiv = styled.div`
+export const SectionHeader = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
@@ -18,6 +18,6 @@ export const StyledDiv = styled.div`
 	}
 `;
 
-export const StyledH2 = styled.h2`
+export const SectionTitle = styled.h2`
 	font-size: 20px;
 `;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledWraperButton = styled.div`
+export const WraperButton = styled.div`
 	@media (max-width: 700px) {
 		display: flex;
 		flex-flow: column;
@@ -9,7 +9,7 @@ export const StyledWraperButton = styled.div`
 	}
 `;
 
-export const StyledButton = styled.button`
+export const Button = styled.button`
 	margin-bottom: 14px;
 	background: none;
 	border: none;

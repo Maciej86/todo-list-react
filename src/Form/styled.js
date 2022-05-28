@@ -12,9 +12,8 @@ export const StyledForm = styled.form`
 	}
 `;
 
-export const StyledInput = styled.input`
+export const Input = styled.input`
 	padding: 7px;
-	font-family: "Lato", sans-serif;
 	border: 1px solid rgb(205, 208, 210);
 
 	&:focus,
@@ -24,7 +23,7 @@ export const StyledInput = styled.input`
 	}
 `;
 
-export const StyledButton = styled.button`
+export const Button = styled.button`
 	padding: 10px 25px;
 	background: rgb(0, 128, 128);
 	border: none;

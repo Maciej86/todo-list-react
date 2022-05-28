@@ -1,5 +1,5 @@
-import { StyledMain } from "./styled";
+import { Main } from "./styled";
 
-const Container = ({ children }) => <StyledMain>{children}</StyledMain>;
+const Container = ({ children }) => <Main>{children}</Main>;
 
 export default Container;

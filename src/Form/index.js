@@ -1,9 +1,13 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { StyledForm, StyledInput, StyledButton } from "./styled";
 
 const Form = ({ addNewTask }) => {
 	const [newTaskContent, setNewTaskContent] = useState("");
 	const inputFocus = useRef(null);
+
+	useEffect(() => {
+		inputFocus.current.focus();
+	}, []);
 
 	const onFormSubmit = (event) => {
 		event.preventDefault();

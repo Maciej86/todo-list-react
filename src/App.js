@@ -1,3 +1,4 @@
+import { Main } from "./styled";
 import { useState } from "react";
 import { useTask } from "./useTask";
 import Form from "./Form";
@@ -5,7 +6,6 @@ import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
-import Container from "./Container";
 
 function App() {
 	const [hideDone, setHideDone] = useState(false);
@@ -17,7 +17,7 @@ function App() {
 		useTask();
 
 	return (
-		<Container className="main">
+		<Main className="main">
 			<Header title="Lista zadań" />
 
 			<Section
@@ -44,7 +44,7 @@ function App() {
 					/>
 				}
 			/>
-		</Container>
+		</Main>
 	);
 }
 

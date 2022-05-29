@@ -2,12 +2,14 @@ html {
   box-sizing: border-box;
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: inherit;
 }
 
 body {
-  background: rgb(230,230,230);
-  font-family: 'Lato', sans-serif;
+  background: rgb(230, 230, 230);
+  font-family: "Lato", sans-serif;
   word-break: break-word;
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Main } from "../../styled";
 import { useTask } from "../../useTask";
 import Form from "./Form";
@@ -6,15 +7,24 @@ import TasksList from "./TasksList";
 import Buttons from "./Buttons";
 import Section from "../../common/Section";
 import Header from "../../common/Header";
+import { selectTasks } from "./tasksSlice";
 
 function Tasks() {
   const [hideDone, setHideDone] = useState(false);
+
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
   };
 
-  const { tasks, removeTask, toggleTaskDone, setAllDone, addNewTask } =
-    useTask();
+  const { tasks } = useSelector(selectTasks);
+
+  const {
+    //tasks,
+    removeTask,
+    toggleTaskDone,
+    setAllDone,
+    addNewTask,
+  } = useTask();
 
   return (
     <Main>

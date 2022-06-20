@@ -8,7 +8,7 @@ import {
 import removeIcon from "./images/remove.png";
 import doneIcon from "./images/done.png";
 
-const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
+const TasksList = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
   <List>
     {tasks.map((task) => (
       <ListItem hidden={hideDone && task.done} key={task.id}>
@@ -24,4 +24,4 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
   </List>
 );
 
-export default Tasks;
+export default TasksList;

@@ -1,13 +1,13 @@
-import { Main } from "./styled";
 import { useState } from "react";
-import { useTask } from "./useTask";
+import { Main } from "../../styled";
+import { useTask } from "../../useTask";
 import Form from "./Form";
-import Tasks from "./Tasks";
+import TasksList from "./TasksList";
 import Buttons from "./Buttons";
-import Section from "./Section";
-import Header from "./Header";
+import Section from "../../common/Section";
+import Header from "../../common/Header";
 
-function App() {
+function Tasks() {
   const [hideDone, setHideDone] = useState(false);
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
@@ -28,7 +28,7 @@ function App() {
       <Section
         title="Lista zadań"
         body={
-          <Tasks
+          <TasksList
             tasks={tasks}
             hideDone={hideDone}
             removeTask={removeTask}
@@ -48,4 +48,4 @@ function App() {
   );
 }
 
-export default App;
+export default Tasks;

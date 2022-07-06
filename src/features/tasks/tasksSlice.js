@@ -9,9 +9,9 @@ const tasksSlice = createSlice({
     addTask: ({ tasks }, { payload: task }) => {
       tasks.push(task);
     },
-    removeTask: (state, action) => {
-      const index = state.tasks.findIndex((task) => task.id === action.payload);
-      state.tasks.splice(index, 1);
+    removeTask: ({ tasks }, { payload: taskId }) => {
+      const index = tasks.findIndex((task) => task.id === taskId);
+      tasks.splice(index, 1);
     },
     toggleTaskDone: ({ tasks }, { payload: taskId }) => {
       const index = tasks.findIndex((task) => task.id === taskId);

@@ -1,6 +1,10 @@
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { selectTasks, removeTask, toggleTaskDone } from "../tasksSlice";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  selectTasks,
+  selectHideDone,
+  removeTask,
+  toggleTaskDone,
+} from "../tasksSlice";
 import removeIcon from "./images/remove.png";
 import doneIcon from "./images/done.png";
 import {
@@ -12,7 +16,8 @@ import {
 } from "./styled";
 
 const TasksList = () => {
-  const { tasks, hideDone } = useSelector(selectTasks);
+  const tasks = useSelector(selectTasks);
+  const hideDone = useSelector(selectHideDone);
   const dispatch = useDispatch();
 
   return (

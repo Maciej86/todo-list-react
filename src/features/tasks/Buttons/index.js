@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
 import {
-  selectTasks,
   selectHideDone,
   selectIsEveryTaskDone,
   selectAreTasksEmpty,
@@ -11,7 +10,6 @@ import { WraperButton } from "../Buttons/styled";
 import { Button } from "../Button";
 
 const Buttons = () => {
-  const tasks = useSelector(selectTasks);
   const hideDone = useSelector(selectHideDone);
   const isEvryTaskDone = useSelector(selectIsEveryTaskDone);
   const areTaskEmpty = useSelector(selectAreTasksEmpty);

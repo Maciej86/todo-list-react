@@ -25,6 +25,9 @@ const tasksSlice = createSlice({
         tasks.done = true;
       });
     },
+    fetchExampleTasks: () => {
+      console.log("Działa");
+    },
   },
 });
 
@@ -34,6 +37,7 @@ export const {
   toggleHideDone,
   toggleTaskDone,
   toggleHideAllDone,
+  fetchExampleTasks,
 } = tasksSlice.actions;
 
 const selectTasksState = (state) => state.tasks;

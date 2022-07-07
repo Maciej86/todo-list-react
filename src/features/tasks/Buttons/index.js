@@ -7,7 +7,8 @@ import {
   toggleHideDone,
   toggleHideAllDone,
 } from "../tasksSlice";
-import { Button, WraperButton } from "../Buttons/styled";
+import { WraperButton } from "../Buttons/styled";
+import { Button } from "../Button";
 
 const Buttons = () => {
   const tasks = useSelector(selectTasks);

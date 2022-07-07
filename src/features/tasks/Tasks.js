@@ -13,8 +13,8 @@ function Tasks() {
 
       <Section
         title="Lista zadań"
-        body={<TasksList />}
         extraHeaderContent={<Buttons />}
+        body={<TasksList />}
       />
     </Main>
   );

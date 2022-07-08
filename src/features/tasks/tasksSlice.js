@@ -25,8 +25,9 @@ const tasksSlice = createSlice({
         tasks.done = true;
       });
     },
-    fetchExampleTasks: () => {
-      console.log("Działa");
+    fetchExampleTasks: () => {},
+    setTasks: (state, { payload: tasks }) => {
+      state.tasks = tasks;
     },
   },
 });
@@ -38,14 +39,14 @@ export const {
   toggleTaskDone,
   toggleHideAllDone,
   fetchExampleTasks,
+  setTasks,
 } = tasksSlice.actions;
 
 const selectTasksState = (state) => state.tasks;
 
 export const selectTasks = (state) => selectTasksState(state).tasks;
 export const selectHideDone = (state) => selectTasksState(state).hideDone;
-export const selectAreTasksEmpty = (state) =>
-  selectTasksState(state).length === 0;
+export const selectAreTasksEmpty = (state) => selectTasks(state).length === 0;
 export const selectIsEveryTaskDone = (state) =>
   selectTasks(state).every(({ done }) => done);
 

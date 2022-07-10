@@ -6,7 +6,7 @@ import ExampleTasks from "./FetchExampleTasks";
 import Section from "../../common/Section";
 import Header from "../../common/Header";
 
-function Tasks() {
+const Tasks = () => {
   return (
     <Main>
       <Header title="Lista zadań" />
@@ -24,6 +24,6 @@ function Tasks() {
       />
     </Main>
   );
-}
+};
 
 export default Tasks;

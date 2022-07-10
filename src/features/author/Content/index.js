@@ -1,7 +1,7 @@
-import { WraperContent, Article, Header2, Image, Figcaption } from "./styled";
+import { WrapperContent, Article, Header2, Image, Figcaption } from "./styled";
 
 const Content = () => (
-  <WraperContent>
+  <WrapperContent>
     <Article>
       <Header2>O mnie</Header2>
       <p>
@@ -54,7 +54,7 @@ const Content = () => (
         </Figcaption>
       </figure>
     </Article>
-  </WraperContent>
+  </WrapperContent>
 );
 
 export default Content;

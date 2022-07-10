@@ -6,7 +6,7 @@ import {
   toggleHideDone,
   toggleHideAllDone,
 } from "../tasksSlice";
-import { WraperButton } from "../Buttons/styled";
+import { WrapperButton } from "../Buttons/styled";
 import { Button } from "../Button";
 
 const Buttons = () => {
@@ -16,7 +16,7 @@ const Buttons = () => {
   const dispatch = useDispatch();
 
   return (
-    <WraperButton>
+    <WrapperButton>
       {!areTaskEmpty && (
         <>
           <Button onClick={() => dispatch(toggleHideDone())}>
@@ -30,7 +30,7 @@ const Buttons = () => {
           </Button>
         </>
       )}
-    </WraperButton>
+    </WrapperButton>
   );
 };
 

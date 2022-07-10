@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const WraperContent = styled.div`
+export const WrapperContent = styled.div`
   padding: 15px;
   border-top: 1px solid rgb(205, 208, 210);
   line-height: 1.5;

@@ -1,9 +1,18 @@
-import { takeLatest, call, put, delay } from "redux-saga/effects";
+import {
+  takeLatest,
+  call,
+  put,
+  delay,
+  takeEvery,
+  select,
+} from "redux-saga/effects";
 import { getExampleTasks } from "./getExampleTasks";
+import { saveTasksInLocalStorage } from "./tasksLocalStorage";
 import {
   fetchExampleTasks,
   fetchExampleTasksError,
   fetchExampleTasksSucces,
+  selectTasks,
 } from "./tasksSlice";
 
 function* fetchExampleTasksHendler() {
@@ -17,6 +26,12 @@ function* fetchExampleTasksHendler() {
   }
 }
 
+function* saveTasksInLocalStorageHendler() {
+  const tasks = yield select(selectTasks);
+  yield call(saveTasksInLocalStorage, tasks);
+}
+
 export function* watchFetchExampleTasks() {
   yield takeLatest(fetchExampleTasks.type, fetchExampleTasksHendler);
+  yield takeEvery("*", saveTasksInLocalStorageHendler);
 }

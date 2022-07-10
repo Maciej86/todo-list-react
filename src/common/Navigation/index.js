@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
+import { WrapperMenu, List, MenuLink } from "./styled";
 
 const Navigation = () => (
-  <ul>
-    <li>
-      <Link to="/zadania">Zadania</Link>
-    </li>
-    <li>
-      <Link to="/autor">Autor</Link>
-    </li>
-  </ul>
+  <WrapperMenu>
+    <List>
+      <MenuLink to="/zadania">Zadania</MenuLink>
+    </List>
+    <List>
+      <MenuLink to="/autor">Autor</MenuLink>
+    </List>
+  </WrapperMenu>
 );
 
 export default Navigation;

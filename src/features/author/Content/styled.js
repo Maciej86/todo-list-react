@@ -16,12 +16,19 @@ export const Header2 = styled.h2`
   font-size: 20px;
 `;
 
+export const Paragraph = styled.p`
+  &:last-child {
+    margin-bottom: 40px;
+  }
+`;
+
 export const Image = styled.img`
   width: 100%;
   max-width: 800px;
 `;
 
 export const Figcaption = styled.figcaption`
+  font-size: 14px;
   color: rgb(130, 130, 130);
   text-align: center;
 `;

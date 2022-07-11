@@ -30,6 +30,7 @@ export const Button = styled.button`
   font-family: "Lato", sans-serif;
   color: rgb(255, 255, 255);
   transition: background 0.4s, transform 0.4s;
+  cursor: pointer;
 
   &:hover {
     background: rgb(0, 142, 142);

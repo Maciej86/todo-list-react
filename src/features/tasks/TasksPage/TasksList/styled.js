@@ -44,6 +44,7 @@ export const Button = styled.button`
   height: 30px;
   border: none;
   transition: background 0.4s;
+  cursor: pointer;
 `;
 
 export const DoneButton = styled(Button)`

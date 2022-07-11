@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 export const List = styled.ul`
@@ -27,6 +28,15 @@ export const ListItem = styled.li`
     css`
       display: none;
     `};
+`;
+
+export const TaskLink = styled(Link)`
+  color: rgb(69, 69, 69);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export const Button = styled.button`

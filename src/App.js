@@ -1,6 +1,6 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./common/Navigation";
-import Tasks from "./features/tasks/Tasks";
+import Tasks from "./features/tasks/TasksPage";
 import Author from "./features/author/Author";
 
 const App = () => (

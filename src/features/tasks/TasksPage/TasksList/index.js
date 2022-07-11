@@ -4,7 +4,7 @@ import {
   selectHideDone,
   removeTask,
   toggleTaskDone,
-} from "../tasksSlice";
+} from "../../tasksSlice";
 import removeIcon from "./images/remove.png";
 import doneIcon from "./images/done.png";
 import {

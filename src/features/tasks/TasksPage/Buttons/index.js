@@ -5,7 +5,7 @@ import {
   selectAreTasksEmpty,
   toggleHideDone,
   toggleHideAllDone,
-} from "../tasksSlice";
+} from "../../tasksSlice";
 import { WrapperButton } from "../Buttons/styled";
 import { Button } from "../Button";
 

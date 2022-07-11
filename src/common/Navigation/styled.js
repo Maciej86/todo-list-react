@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const WrapperMenu = styled.ul`
   display: flex;
@@ -18,11 +18,15 @@ export const List = styled.li`
   font-size: 18px;
 `;
 
-export const MenuLink = styled(Link)`
+export const MenuLink = styled(NavLink)`
   color: rgb(255, 255, 255);
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
+  }
+
+  &.active {
+    font-weight: bold;
   }
 `;

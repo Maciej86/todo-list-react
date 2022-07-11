@@ -12,17 +12,6 @@ export const StyledForm = styled.form`
   }
 `;
 
-export const Input = styled.input`
-  padding: 7px;
-  border: 1px solid rgb(205, 208, 210);
-
-  &:focus,
-  &:hover {
-    border: 1px solid rgb(69, 69, 69);
-    outline: none;
-  }
-`;
-
 export const Button = styled.button`
   padding: 10px 25px;
   background: rgb(0, 128, 128);

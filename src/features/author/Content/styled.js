@@ -11,7 +11,7 @@ export const Article = styled.article`
   text-align: justify;
 `;
 
-export const Header2 = styled.h2`
+export const SubHeader = styled.h2`
   margin-top: 0;
   font-size: 20px;
 `;

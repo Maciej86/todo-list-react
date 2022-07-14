@@ -1,7 +1,7 @@
 import {
   WrapperContent,
   Article,
-  Header2,
+  SubHeader as SubHeader,
   Paragraph,
   Image,
   Figcaption,
@@ -10,7 +10,7 @@ import {
 const Content = () => (
   <WrapperContent>
     <Article>
-      <Header2>O mnie</Header2>
+      <SubHeader>O mnie</SubHeader>
       <Paragraph>
         Za dużo nie ma co pisać o sobie. Jestem jednym z wielu, których mijasz
         codziennie kiedy jedziesz do szkoły, pracy czy sklepu. Jakoś niczym
@@ -30,7 +30,7 @@ const Content = () => (
       </Paragraph>
     </Article>
     <Article>
-      <Header2>Kolarstwo - część mojego życia</Header2>
+      <SubHeader>Kolarstwo - część mojego życia</SubHeader>
       <Paragraph>
         Czym jest kolarstwo? Dla osoby lubiący ten sport,{" "}
         <strong>to coś więcej</strong> niż kolarz lub kolarka (tak to się

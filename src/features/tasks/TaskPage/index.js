@@ -9,7 +9,7 @@ import { Completed } from "./styled";
 const TaskPage = () => {
   const { id } = useParams();
   const task = useSelector((state) => getTaskbyId(state, id));
-  console.log(task);
+
   return (
     <Main>
       <Header title="Szczegóły zadania" />
@@ -17,9 +17,11 @@ const TaskPage = () => {
       <Section
         title={task ? task.content : "Brak zadania"}
         body={
-          <Completed>
-            <strong>Ukończono: </strong> {task.done ? "Tak" : "Nie"}
-          </Completed>
+          !!task && (
+            <Completed>
+              <strong>Ukończono: </strong> {task.done ? "Tak" : "Nie"}
+            </Completed>
+          )
         }
       />
     </Main>

@@ -4,9 +4,18 @@ Application that creates a ToDo List.
 
 ![ToDo List - React](https://github.com/Maciej86/todo-list-react/blob/main/public/og-image.webp)
 
-## DEMO
+## Demo
 
 https://maciej86.github.io/todo-list-react/
+
+## Used Technologies
+
+- React 18.0.0
+- React Styled Components 5.3.5
+- React Redux 8.0.2
+- Redux Saga 1.1.3
+- JavaScript - ECMAScript 6
+- HTML / CSS
 
 ## Getting Started with Create React App
 

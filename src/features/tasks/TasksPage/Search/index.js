@@ -25,7 +25,7 @@ const Search = () => {
       <form>
         <Input
           type="text"
-          value={query}
+          value={query == null ? "" : query}
           onChange={onInputChange}
           placeholder="Filtruj zadania"
         />
